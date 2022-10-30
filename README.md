@@ -1,3 +1,3 @@
 # Ayoub & Saade projet immobilier familial
 
-Link : https://ayoubsaade.github.io/maisons/
+Link : https://albertrealestate.github.io/properties/

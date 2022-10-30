@@ -18,5 +18,5 @@ git push
 # pour send/upload build
 #open cmd
 cd \Users\albert.ayoub\Documents\Millette\WebsiteAA\maisons
-ng build --prod --base-href https://ayoubsaade.github.io/maisons/
-npx ngh --dir=dist/maisons
+ng build --prod --base-href https://albertrealestate.github.io/properties/
+npx ngh --dir=dist/properties

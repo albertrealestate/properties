@@ -32,7 +32,7 @@
             <br>
 
             <div *ngIf="prop.size > 1; else elseBlock">
-                <app-carousel class="info-lg" [prop]="prop"></app-carousel>
+                <app-carousel [prop]="prop"></app-carousel>
                 <!--Carousel-->
                 <div class="info-sm">
                     <ngb-carousel class="lower" *ngIf="images">

@@ -1,0 +1,46 @@
+<!--
+    
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2746.290745532992!2d-72.20581368440745!3d46.502354879126926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc797e9cd25f35b%3A0x92a8d4ceb2bd76fa!2s336+QC-132%2C+Saint-Pierre-les-Becquets%2C+QC+G0X+2Z0!5e0!3m2!1sfr!2sca!4v1564892207524!5m2!1sfr!2sca" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></p>
+-->
+
+<div class="row" id="containerz">
+    <div>
+        <img src={{urlImg}} alt="Image" (click)="clicked()">
+    </div>
+
+    <div class="info">
+
+        <h3 (click)="clicked()" class="link">{{adress}}</h3>
+
+
+        <p>{{city}} | <a href={{urlMap}} *ngIf="urlMap">{{wordBank.seeMap[propService.isFrench]}}</a></p>
+        <p>Type : {{type}}</p>
+
+        <hr>
+
+        <div class="row">
+            <div class="col">
+                <p>{{wordBank.price_title[propService.isFrench]}} : </p>
+                <h3 class="money">{{prix}}</h3>
+            </div>
+            <div class="col" *ngIf="nbChambre">
+                <h2>{{nbChambre}}</h2>
+                <p>{{wordBank.bed_title[propService.isFrench]}}</p>
+            </div>
+            <div class="col" *ngIf="nbSalleBain">
+                <h2>{{nbSalleBain}}</h2>
+                <p>{{wordBank.bath_title[propService.isFrench]}}</p>
+            </div>
+            <div class="col" *ngIf="nbPiedsCarre">
+                <h2>{{nbPiedsCarre}}</h2>
+                <p>{{wordBank.dim_title[propService.isFrench]}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--
+
+
+
+-->

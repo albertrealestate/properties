@@ -1,0 +1,33 @@
+.md-size img {
+    width: 50%;
+    float: left;
+  }
+  
+  hr {
+      height: 10px;
+      border: 0;
+      box-shadow: 0 10px 10px -10px #8c8b8b inset;
+  }
+  
+  @media only screen and (min-width: 1005px) {
+    .md-size {
+      display: none;
+    }
+  }
+  
+  @media only screen and (min-width: 700px) and (max-width: 1005px) {
+    .lg-size {
+      display: none;
+    }
+  }
+  
+  @media only screen and (max-width: 700px) {
+    .lg-size {
+      display: none;
+    }
+    .md-size img{
+      width: 100% !important;
+    }
+  
+  }
+  

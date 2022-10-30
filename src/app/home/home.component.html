@@ -1,0 +1,32 @@
+<head>
+  <title>Home</title>
+</head>
+
+<div class="row">
+  <div class="col">
+    <div class="round" (click)="vendre()">
+      <i class="fa fa-home"></i>
+    </div>
+    <h1>{{wordBank.vendre[proper.isFrench]}}</h1>
+  </div>
+  <div class="col">
+    <div class="round" (click)="louer()">
+      <i class="fas fa-building"></i>
+    </div>
+    <h1>{{wordBank.louer[proper.isFrench]}}</h1>
+  </div>
+</div> 
+
+<!-- About section -->
+<div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="about">
+  <h4><b>{{wordBank.propos[proper.isFrench]}}</b></h4>
+  <img src="assets/proprio.jpg" alt="Succ" class="w3-image w3-padding-32" width="600" height="650">
+  <div class="w3-content w3-justify" style="max-width:600px">
+    <div style="width : 100%; text-align: center">
+      <h4>Albert Ayoub | Rose Saade</h4>
+      <p>Email: <a style="color : #2200cc" href="mailto:albertayoub@hotmail.com">albertayoub@hotmail.com</a></p>
+      <p>{{wordBank.tel[proper.isFrench]}}: (514)883-3789</p>
+    </div>
+  </div>
+
+</div>

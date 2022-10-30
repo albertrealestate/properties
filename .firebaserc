@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "maisonsvendre-e8964": {
+      "hosting": {
+        "maisons": [
+          "maisonsvendre-e8964"
+        ]
+      }
+    }
+  }
+}

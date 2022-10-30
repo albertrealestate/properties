@@ -1,0 +1,30 @@
+<nav id="mainNav" class="navbar navbar-expand-md bg-dark navbar-dark">
+  <a class="navbar-brand" (click)="home()">
+    <h2>{{wordBank.home[proper.isFrench]}}</h2>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" (click)="vendre()">
+          <h3>{{wordBank.vendre[proper.isFrench]}}</h3>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="louer()">
+          <h3>{{wordBank.louer[proper.isFrench]}}</h3>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="changeLanguage()">
+          <h3>{{language[propService.isFrench]}}</h3>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+<router-outlet></router-outlet>

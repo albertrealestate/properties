@@ -1,0 +1,73 @@
+img {
+  max-height: 500px;
+}
+
+#carouselExampleControls {
+  max-height: 90px !important;
+  overflow: hidden !important;
+}
+
+.arrowContainer {
+  position: absolute;
+  top: 45%;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: black;
+}
+.arrowContainer:hover{
+  cursor: pointer;
+}
+
+.leftArrow{
+  left: 2px;
+}
+
+.leftArrow span{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -ms-transform: translate(-55%, -50%);
+  transform: translate(-55%, -50%);
+}
+
+.rightArrow{
+  left : 94%;
+}
+
+.rightArrow span{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -ms-transform: translate(-45%, -50%);
+  transform: translate(-45%, -50%);
+}
+
+.carousel-item img {
+  cursor: pointer;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 20px;
+  background-color: black;
+}
+
+.presenting {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23EEEEEE' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23EEEEEE' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+
+.col-2 {
+  padding-left: 1px;
+  padding-right: 1px;
+}

@@ -1,0 +1,19 @@
+<!-- Les propriétés en blocks -->
+<div class="w3-main w3-content" style="max-width:1600px">
+    <div class="md-size">
+        <!-- Photo grid -->
+        <div *ngFor="let item of this.louer">
+            <img src="{{item.url}}/1.jpg" alt={{item.id}} (click)="click(item.id)">
+        </div>
+    </div>
+
+    <!-- Les propriétés en bandes -->
+    <div class="lg-size">
+        <div *ngFor="let item of this.louer">
+            <app-post id={{item.id}} urlImg="{{item.url}}/1.jpg" adress={{item.adress}} city={{item.city}}
+                urlMap={{item.urlMap}} type={{item.sellType[propService.isFrench]}} prix={{item.prix}} nbChambre={{item.nbChambre}}
+                nbSalleBain={{item.nbSalleBain}} nbPiedsCarre={{item.nbPiedsCarre}}></app-post>
+            <hr>
+        </div>
+    </div>
+</div>

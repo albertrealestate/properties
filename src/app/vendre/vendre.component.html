@@ -1,0 +1,45 @@
+<!-- Les propriétés en blocks -->
+<div style="max-width: 1600px">
+  <div class="md-size">
+    <!-- Photo grid -->
+    <div class="center">
+      <div *ngFor="let item of this.vendre">
+        <div *ngIf="item.isVendre">
+          <app-post-md
+            id="{{ item.id }}"
+            urlImg="{{ item.url }}/1.jpg"
+            adress="{{ item.adress }}"
+            city="{{ item.city }}"
+            urlMap="{{ item.urlMap }}"
+            type="{{ item.sellType[propService.isFrench] }}"
+            prix="{{ item.prix }}"
+            nbChambre="{{ item.nbChambre }}"
+            nbSalleBain="{{ item.nbSalleBain }}"
+            nbPiedsCarre="{{ item.nbPiedsCarre }}"
+          ></app-post-md>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Les propriétés en bandes -->
+  <div class="lg-size">
+    <div *ngFor="let item of this.vendre">
+      <div *ngIf="item.isVendre">
+        <app-post
+          id="{{ item.id }}"
+          urlImg="{{ item.url }}/1.jpg"
+          adress="{{ item.adress }}"
+          city="{{ item.city }}"
+          urlMap="{{ item.urlMap }}"
+          type="{{ item.sellType[propService.isFrench] }}"
+          prix="{{ item.prix }}"
+          nbChambre="{{ item.nbChambre }}"
+          nbSalleBain="{{ item.nbSalleBain }}"
+          nbPiedsCarre="{{ item.nbPiedsCarre }}"
+        ></app-post>
+      </div>
+      <hr />
+    </div>
+  </div>
+</div>

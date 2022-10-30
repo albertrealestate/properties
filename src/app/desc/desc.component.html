@@ -1,0 +1,145 @@
+<head>
+    <title>Description</title>
+</head>
+
+
+<body class="w3-content">
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main w3-white" style="margin-top : 40px">
+
+        <div class="w3-container">
+            <!-- Big screen -->
+            <div class="row info-lg">
+                <div class="col-8">
+                    <h3>{{prop.title}} | <a href={{prop.urlRealtor}}
+                            class="realtor">{{wordBank.more_infos[proper.isFrench]}}</a></h3>
+                    <h4>{{prop.adress}}, {{prop.city}}</h4>
+                </div>
+
+                <div class="col-4">
+                    <h4>{{wordBank.price_title[proper.isFrench]}}:</h4>
+                    <h3 class="money">{{prop.prix}}</h3>
+                </div>
+            </div>
+            <!-- Phone screen -->
+            <div class="info-sm">
+                <h3>{{prop.title}} | <a href={{prop.urlRealtor}}
+                        class="realtor">{{wordBank.more_infos[proper.isFrench]}}</a></h3>
+                <h4>{{prop.adress}}, {{prop.city}}</h4>
+                <h4>{{wordBank.price_title[proper.isFrench]}} : <strong>{{prop.prix}}</strong></h4>
+            </div>
+            <br>
+
+            <div *ngIf="prop.size > 1; else elseBlock">
+                <app-carousel class="info-lg" [prop]="prop"></app-carousel>
+                <!--Carousel-->
+                <div class="info-sm">
+                    <ngb-carousel class="lower" *ngIf="images">
+                        <div *ngFor="let image of images">
+                            <ng-template ngbSlide class="lower">
+                                <img [src]="image" class="lower">
+                            </ng-template>
+                        </div>
+                    </ngb-carousel>
+                </div>
+            </div>
+            <ng-template #elseBlock>
+                <img id="singleImg" src="{{prop.url}}/1.jpg" alt="Image">
+            </ng-template>
+
+            <!-- Relevant information -->
+            <div style="margin-top : 20px;">
+                <h4><strong>{{wordBank.pertinent_infos[proper.isFrench]}} : </strong></h4>
+                <div class="relevantInfo">
+                    <p>{{wordBank.adresse[proper.isFrench]}}: {{ prop.adress }}, {{prop.city}}</p>
+                    <p *ngIf="prop.EvalMuni">{{wordBank.eval_muni[proper.isFrench]}} : {{prop.EvalMuni}}</p>
+                    <p *ngIf="prop.mls">mls : {{prop.mls}}</p>
+                </div>
+                <div class="personnalInfo">
+                    <img src="assets/proprio2.png" alt="Front Profile Pic">
+                    <p><strong>{{wordBank.contacter[proper.isFrench]}}</strong></p>
+                    <p><i class="fa fa-fw fa-at"></i> <a style="color : #2200cc"
+                            href="mailto:albertayoub@hotmail.com"> albertayoub@hotmail.com</a></p>
+                    <p><i style="transform: rotate(90deg);" class="fa">&#xf095;</i> (514)883-3789</p>
+                </div>
+            </div>
+
+
+            <!-- Espace -->
+            <hr>
+            <div *ngIf="prop.nbPiedsCarre || prop.nbSalleBain || prop.nbChambre || prop.AConstruction">
+                <h4><strong>{{wordBank.espace[proper.isFrench]}}</strong></h4>
+
+                <div class="w3-row w3-large">
+                    <div class="col-6">
+                        <p *ngIf="prop.AConstruction"><i
+                                class="fa fa-home"></i>{{wordBank.construction[proper.isFrench]}} :
+                            {{prop.AConstruction}}</p>
+                    </div>
+                    <div class="col-6">
+                        <p *ngIf="prop.nbPiedsCarre"><i class="fa fa-arrows-alt"></i> {{prop.nbPiedsCarre}}
+                            {{wordBank.dim_title}}
+                        </p>
+                    </div>
+                    <div class="col-6">
+                        <p *ngIf="prop.nbChambre"><i class="fa fa-fw fa-bed"></i>
+                            {{wordBank.bed_title}}: {{prop.nbChambre}}</p>
+
+                    </div>
+                    <div class="col-6">
+                        <p *ngIf="prop.nbSalleBain"><i class="fa fa-fw fa-bath"></i>
+                            {{wordBank.bath_title}}: {{prop.nbSalleBain}}
+                        </p>
+                    </div>
+                </div>
+                <hr>
+            </div>
+
+            <div *ngIf="prop.Description">
+                <p (click)="collapsDesc = !collapsDesc" class="sub"><strong>DESCRIPTION</strong></p>
+                <div [ngbCollapse]="collapsDesc" style="padding: 5px">
+                    <div *ngFor="let description of prop.Description[proper.isFrench]">
+                        <p>{{description}}</p>
+                    </div>
+                </div>
+                <hr>
+            </div>
+
+            <div *ngIf="prop.Dimensions">
+                <strong>
+                    <p (click)="collapsDim = !collapsDim" class="sub">DIMENSIONS</p>
+                </strong>
+                <div [ngbCollapse]="collapsDim">
+                    <table>
+                        <tr *ngFor="let arr of prop.Dimensions[proper.isFrench]">
+                            <td>{{arr[0]}}</td>
+                            <td>{{arr[1]}}</td>
+                        </tr>
+                    </table>
+                </div>
+                <hr>
+            </div>
+
+            <div *ngIf="prop.carac">
+                <strong>
+                    <p (click)="collapsCarac = !collapsCarac" class="sub">CARACTÉRISTIQUES</p>
+                </strong>
+                <div [ngbCollapse]="collapsCarac">
+                    <table class="tableDetail">
+                        <tbody>
+                            <tr *ngFor="let arr of prop.carac[proper.isFrench]">
+                                <td>{{arr[0]}}</td>
+                                <td>{{arr[1]}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <hr>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>

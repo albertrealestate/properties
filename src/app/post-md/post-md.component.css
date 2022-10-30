@@ -1,0 +1,48 @@
+img {
+  display: block;
+  height: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.alignleft{
+    float: left;
+}
+
+.alignright{
+    float: right;
+}
+
+
+#image-container {
+  width: 100%;
+  max-height: 250px;
+  height: 250px;
+}
+
+#container {
+  margin: 10px;
+  max-width: 90%;
+  min-width: 300px;
+  width: 350px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+#info-container{
+    padding : 10px;
+    font-size: 13px;
+}
+#info-container p{
+    margin:0;
+}
+
+#textbox{
+    font-weight: bold;
+    font-size: 16px;
+}
+
+@media only screen and (min-width: 700px) and (max-width: 1005px) {
+  #container {
+    margin : 10px auto;
+  }
+}

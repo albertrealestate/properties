@@ -1,0 +1,22 @@
+#quand la phrase commance avec un # sa veux dire que c'est un commentaire (ne pas copier coller)
+
+
+# avant de faire un changement (pour get/download la page web) 
+# *** 1) ouvrir git ****
+cd Documents/Millette/WebsiteAA/maisons
+git pull
+----------------------------------------------------------------
+# pour send/upload src
+# *** 1) ouvrir git ****
+cd Documents/Millette/WebsiteAA/maisons
+git add .
+git commit -m zz
+git push
+
+------------------------------------------------------------------
+
+# pour send/upload build
+#open cmd
+cd \Users\albert.ayoub\Documents\Millette\WebsiteAA\maisons
+ng build --prod --base-href https://ayoubsaade.github.io/maisons/
+npx ngh --dir=dist/maisons

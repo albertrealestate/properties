@@ -1,0 +1,142 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Open Sans", Arial, sans-serif;
+}
+p{
+  font-size : 18px;
+}
+i{
+  font-size : 14px;
+}
+
+img{
+  width : 200px
+}
+
+h3{
+  font-weight: bold;
+}
+
+a{
+  color : green;
+  text-decoration: none;
+  font-weight: none;
+}
+body{
+  background-color: white;
+}
+br{
+  height: 20px;
+}
+
+table {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td {
+  font: 400 18px/150% "Open Sans", Arial, sans-serif;
+  color: #666;
+  border-bottom: 1px solid #d5d5d5;
+  padding: 8px;
+}
+
+.relevantInfo, .personnalInfo{
+  display: inline-block;
+}
+.relevantInfo{
+  width : 60%;
+  vertical-align:top;
+}
+.personnalInfo{
+  width : 40%;
+}
+.personnalInfo p{
+  width : 100%;
+  text-align: center;
+  margin : 2px;
+  font-size: small;
+}
+.personnalInfo img{
+  display: block;
+  margin-left : auto;
+  margin-right : auto;
+  width : 150px;
+  height : 150px;
+}
+
+.realtor{
+  color : blue;
+}
+.realtor:hover{
+  text-decoration: underline;
+}
+
+.lower {
+  width : 100%;
+}
+
+.mySlides {
+  display: none;
+}
+
+.sub {
+  background-color : white;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 17px;
+  background: white;
+}
+
+.active,
+.sub:hover {
+  color: #4CAF50;
+  font-weight: bold;
+}
+
+.sub:after {
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+.col-6{
+  width: 50%;
+  float : left;
+}
+
+#singleImg{
+  width : 100%;
+  height : 500px;
+}
+
+.money::before{
+ content : "$ ";
+}
+
+@media only screen and (max-width: 700px) { 
+  .info-lg{
+    display: none;
+  }
+  .relevantInfo, .personnalInfo{
+    display: block;
+    width : 100%;
+  }
+}
+
+@media only screen and (min-width: 700px) { 
+  .info-sm{
+    display: none;
+  }
+}

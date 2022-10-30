@@ -1,8 +1,8 @@
 {
   "hosting": [
     {
-      "target": "maisons",
-      "public": "dist/maisons",
+      "target": "properties",
+      "public": "dist/properties",
       "ignore": [
         "**/.*"
       ],

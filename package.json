@@ -1,5 +1,5 @@
 {
-  "name": "maisons",
+  "name": "properties",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -32,7 +32,7 @@
   "devDependencies": {
     "@angular-devkit/architect": ">= 0.900 < 0.1200",
     "@angular-devkit/build-angular": "^0.1100.5",
-    "@angular/cli": "^11.0.5",
+    "@angular/cli": "^11.1.2",
     "@angular/compiler-cli": "~11.0.5",
     "@angular/language-service": "~11.0.5",
     "@angular/localize": "^11.0.5",
